@@ -24,4 +24,4 @@ A Computer Vision application that allows you to take selfies using hand gesture
    pip install opencv-python mediapipe numpy
 
 
-   ![Demo Screenshot](My_FOTO-2.jpg)
+   
