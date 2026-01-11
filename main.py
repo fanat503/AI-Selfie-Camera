@@ -77,7 +77,11 @@ class ThreadedCamera:
             if self.capture.isOpened(): (self.status, self.frame) = self.capture.read()
     def get_frame(self): return self.status, self.frame
 
-cap = ThreadedCamera("http://192.168.100.7:8080/video")
+# --- SETTINGS ---
+# Replace this with your phone's IP address from IP Webcam app
+# Example: "http://192.168.0.105:8080/video"
+address = ThreadedCamera("http://192.168.0.XXX:8080/video")
+
 print("ГОТОВО! Управление:")
 print("'n' - Вкл/Выкл нос")
 print("'q' - Выход")
@@ -152,4 +156,5 @@ while True:
         print(f"Нос: {show_nose}")
 
 cap.capture.release() 
+
 cv2.destroyAllWindows()
