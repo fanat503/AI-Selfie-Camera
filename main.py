@@ -82,9 +82,9 @@ class ThreadedCamera:
 # Example: "http://192.168.0.105:8080/video"
 address = ThreadedCamera("http://192.168.0.XXX:8080/video")
 
-print("ГОТОВО! Управление:")
-print("'n' - Вкл/Выкл нос")
-print("'q' - Выход")
+print("DONE! Control:")
+print("'n' - On/Nose off")
+print("'q' - Exit"
 
 # The main cycle
 while True:
@@ -137,7 +137,7 @@ while True:
                     count += 1
                     file_name = f'MY_FOTO-{count}.jpg'
                     cv2.imwrite(file_name, img)
-                    print(f"ФОТО СОХРАНЕНО: {file_name}")
+                    print(f"Photo downloaded: {file_name}")
                     white_flash = np.ones((600, 800, 3), dtype='uint8') * 255
                     cv2.imshow('Selfie Camera', white_flash)
                     cv2.waitKey(100)
@@ -153,8 +153,9 @@ while True:
     
     if key == ord('n'): # Switching the nose
         show_nose = not show_nose
-        print(f"Нос: {show_nose}")
+        print(f"Nose: {show_nose}")
 
 cap.capture.release() 
 
 cv2.destroyAllWindows()
+
